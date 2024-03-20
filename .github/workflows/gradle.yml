@@ -37,18 +37,12 @@ jobs:
     - name: Build with Gradle Wrapper
       run: ./gradlew clean test -i
 
-    - uses: mt185252/cucumber-html-report-generator@v1
-      with:
-       report-theme: 'hierarchy'
-       json-file-path: '${{ github.workspace }}/karate-summary-json.txt'
-       report-metadata: '{"Date":"06-Mar-2024", "Time":"23:30 IST", "Environment": "Staging"}'
-
     - name: Upload HTML report as an artifact to GitHub
       id: artifact_upload
       uses: actions/upload-artifact@v4
       with:
        name: html-report
-       path: '${{ github.workspace }}/auto_qe_cucumber_02_04_2023_T15_10_19.html'
+       path: '${{ github.workspace }}/build/reports/tests/test/index.html'
        if-no-files-found: error
        retention-days: 2
 
