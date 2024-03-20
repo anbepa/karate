@@ -1,33 +1,28 @@
-# karate-action
+[![CI](https://github.com/tkgregory/gradle-github-actions-example/actions/workflows/gradle.yml/badge.svg)](https://github.com/tkgregory/gradle-github-actions-example/actions/workflows/gradle.yml)
 
-[![api tests](https://github.com/erikbos/karate-action/actions/workflows/apitests.yml/badge.svg?branch=main)](https://github.com/erikbos/karate-action/actions/workflows/apitests.yml)
+View the accompanying tutorial [article](https://tomgregory.com/build-gradle-projects-with-github-actions) or [video](https://youtu.be/a7T2MU2l-es).
 
-A GitHub Action to run [Karate](https://intuit.github.io/karate/) tests.
+## Overview
 
-# Input parameters
+This project explores the different ways to build Gradle projects using GitHub actions.
 
-| Input   | Description                                                                           |
-| ------- | ------------------------------------------------------------------------------------- |
-| url     | URL to pass as script variable to a feature test |
-| test    | One or more files or directories containing Karate tests                              |
-| options | Any command line options to pass to Karate                                            |
+1. No caching
+2. Using the *setup-java* Gradle caching mechanism
+3. Using the *gradle-build-action* Gradle caching mechanism
+4. Saving a build artifact, in this case the test report
 
-# Example step
+## Building
 
-```yaml
-steps:
-- name: Checkout
-    uses: actions/checkout@v2.0.0
+This is a small Java project which can be built with `./gradlew build`.
 
-- name: API tests
-    uses: erikbos/karate-action@main
-    with:
-      url: https://api.isevenapi.xyz/api/
-      tests: |
-        example-tests/even-numbers.feature
-        example-tests/odd-numbers.feature
-```
+The project has multiple dependencies that get downloaded from Maven Central. This means that some difference in build times should be noted with caching
+enabled vs. disabled.
 
-# Example workflow
+## Viewing the results
 
-See [example api test workflow](.github/workflows/apitests.yml) which runs two Karate feature tests from the [example-tests](example-tests) directory.
+The project includes a single [workflow](/.github/workflows/gradle.yml) which executes the above scenarios. 
+
+See *[Actions](https://github.com/tkgregory/gradle-github-actions-example/actions)* for all the results.
+
+## Need Gradle support?
+Contact me if you need help with Gradle at [tom@tomgregory.com](mailto:tom@tomgregory.com).
