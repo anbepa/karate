@@ -46,6 +46,15 @@ jobs:
        if-no-files-found: error
        retention-days: 2
 
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action/linux@v2
+      if: always()
+      with:
+       files: |
+        test-results/**/*.xml
+        test-results/**/*.trx
+        test-results/**/*.json
+
 
 
     
