@@ -36,12 +36,15 @@ jobs:
 
     - name: Build with Gradle Wrapper
       run: ./gradlew clean test -i
-
-    - name: Upload build artifacts
+      
+    - name: Upload HTML report as an artifact to GitHub
+      id: artifact_upload
       uses: actions/upload-artifact@v4
       with:
-        name: Package
-        path: build/reports
+       name: html-report
+       path: '${{ github.workspace }}/index.html'
+       if-no-files-found: error
+       retention-days: 2
 
 
 
