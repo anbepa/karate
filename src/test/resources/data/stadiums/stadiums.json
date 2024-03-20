@@ -1,0 +1,72 @@
+[
+  {
+  "infographic_url": "https://www.youtube.com/watch?v=-vxdriGP1KE",
+  "text_first_es": "ejemplo",
+  "text_first_en": "ejemplo",
+  "stadium_image_url": "https://www.youtube.com/watch?v=-vxdriGP1KE",
+  "address_es": "ejemplo",
+  "address_en": "ejemplo",
+  "capacity": 1333,
+  "text_second_es": "ejemplo",
+  "text_second_en": "ejemplo",
+  "latitude": -12.1171289,
+  "longitude": -76.9989951
+},
+
+  {
+    "infographic_url": "https://www.youtube.com/watch?v=-vxdriGP1KE",
+    "text_first_es": "ejemplo",
+    "text_first_en": "ejemplo",
+    "stadium_image_url": "https://www.youtube.com/watch?v=-vxdriGP1KE",
+    "address_es": "ejemplo",
+    "address_en": "ejemplo",
+    "capacity": -1,
+    "text_second_es": "ejemplo",
+    "text_second_en": "ejemplo",
+    "latitude": -12.1171289,
+    "longitude": -76.9989951
+  },
+
+  {
+    "infographic_url": "e",
+    "text_first_es": "ejemplo",
+    "text_first_en": "ejemplo",
+    "stadium_image_url": "https://www.youtube.com/watch?v=-vxdriGP1KE",
+    "address_es": "ejemplo",
+    "address_en": "ejemplo",
+    "capacity": 1,
+    "text_second_es": "ejemplo",
+    "text_second_en": "ejemplo",
+    "latitude": -12.1171289,
+    "longitude": -76.9989951
+  },
+
+  {
+    "infographic_url": "https://www.youtube.com/watch?v=-vxdriGP1KE",
+    "text_first_es": "ejemplo",
+    "text_first_en": "ejemplo",
+    "stadium_image_url": "e",
+    "address_es": "ejemplo",
+    "address_en": "ejemplo",
+    "capacity": 1,
+    "text_second_es": "ejemplo",
+    "text_second_en": "ejemplo",
+    "latitude": -12.1171289,
+    "longitude": -76.9989951
+  },
+
+  {
+    "infographic_url": "https://www.youtube.com/watch?v=-vxdriGP1KE",
+    "text_first_es": "ejemploupdate",
+    "text_first_en": "ejemplo",
+    "stadium_image_url": "https://www.youtube.com/watch?v=-vxdriGP1KE",
+    "address_es": "ejemplo",
+    "address_en": "ejemplo",
+    "capacity": 1333,
+    "text_second_es": "ejemplo",
+    "text_second_en": "ejemplo",
+    "latitude": -12.1171289,
+    "longitude": -76.9989951
+  }
+
+]

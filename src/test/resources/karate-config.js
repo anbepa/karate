@@ -10,7 +10,7 @@ function config() {
 
     var config = {
         useCustomAuth: true,
-        urlBase: 'https://060f-2001-1388-80d-ed0d-cd41-18d7-17b7-ed75.ngrok-free.app' // Valor predeterminado de urlBase
+        urlBase: 'https://kvjzaug6ec.execute-api.us-east-2.amazonaws.com/dev' // Valor predeterminado de urlBase
     };
 
     if (env == 'dev') {
@@ -18,12 +18,12 @@ function config() {
     } else if (env == 'cer') {
         config.urlBase = 'https://ml9c4hwuh4.execute-api.us-east-2.amazonaws.com/dev';
     } else if (env == 'local') {
-        config.urlBase = 'https://060f-2001-1388-80d-ed0d-cd41-18d7-17b7-ed75.ngrok-free.app';
+        config.urlBase = 'https://kvjzaug6ec.execute-api.us-east-2.amazonaws.com/dev';
     }
 
     var access_token = (function() {
         var login_data = karate.read('classpath:data/login.json');
-        var response = karate.callSingle('classpath:karate/GetToken/token.feature', login_data[0]);
+        var response = karate.callSingle('classpath:karate/features/GetToken/token.feature', login_data[0]);
         var token = response.response.access_token;
         karate.configure('headers', { 'Authorization': 'Bearer ' + token });
         //return token;
@@ -33,3 +33,6 @@ function config() {
     karate.configure('readTimeout', 5000);
     return config; // Agregar esta línea para devolver la variable config
 }
+
+
+

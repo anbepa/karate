@@ -3,12 +3,13 @@ plugins {
 }
 
 ext {
-    karateVersion = '1.0.1'
+    karateVersion = '1.4.1'
 }
 
 dependencies {
-    testImplementation 'com.intuit.karate:karate-junit5:1.2.0'
-    testImplementation 'net.masterthought:cucumber-reporting:5.5.3'
+    implementation 'org.testng:testng:7.1.0'
+    implementation "com.intuit.karate:karate-junit5:${karateVersion}"
+    implementation "net.masterthought:cucumber-reporting:5.7.2"
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.1'
     implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.15'
 }
@@ -28,7 +29,6 @@ sourceSets {
 repositories {
     mavenCentral()
 }
-
 
 
 test {

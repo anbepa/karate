@@ -1,20 +1,13 @@
 {
   "status": true,
   "message": "User authenticated successfully",
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMGE4NWZjYjAtZTUzMy0xMWVlLWE4ODMtM2RkYWM3MWM0ZmFiIiwibmFtZSI6IlRlc3QiLCJsYXN0X25hbWUiOiJUZXN0IiwiZW1haWwiOiJhbmRybzExYW50b0BnbWFpbC5jb20iLCJwaG9uZSI6Iis1NzMwMjQxODc4NTEiLCJiaXJ0aGRhdGUiOiIyMDAwLTEwLTEwIiwiZ2VuZGVyIjpudWxsLCJsaW5rZWRpbl91cmwiOm51bGwsInR3aXR0ZXJfdXJsIjpudWxsLCJmYWNlYm9va191cmwiOm51bGwsImluc3RhZ3JhbV91cmwiOm51bGwsImlhdCI6MTcxMDc3MjExMH0.vuBWlDqQbhtQlJpazmj0BOZBKGtEjFGJYmWFfqEJj5w",
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjFhMzNhNjAtZTUxMy0xMWVkLWI3MTEtM2IzY2FjMWRhZGY2IiwiaWF0IjoxNjgzNjg4OTE5LCJleHAiOjE2ODM3NzUzMTl9.-jjtCaaDT9FjTNuJMa6vakzMgkZejnFwbdni2P3gFkw",
   "token_type": "Bearer",
-  "first_login": false,
+  "expires": "1d",
   "user": {
-    "id": "0a85fcb0-e533-11ee-a883-3ddac71c4fab",
-    "name": "Test",
-    "last_name": "Test",
-    "email": "andro11anto@gmail.com",
-    "phone": "+573024187851",
-    "birthdate": "2000-10-10",
-    "gender": null,
-    "linkedin_url": null,
-    "twitter_url": null,
-    "facebook_url": null,
-    "instagram_url": null
+    "id": "61a33a60-e513-11ed-b711-3b3cac1dadf6",
+    "fullname": "Test",
+    "nickname": "Test",
+    "email": "prueba2@prueba2.com"
   }
 }

@@ -1,5 +1,0 @@
-
-  {
-    "GetObligationInvoiceId": "select *  from  schsaf.tbl_obligation_invoice where invoice_id = 8956",
-    "updateInvoiceHeader": "update schsaf.tbl_invoice_header tih SET state = 'IMPEDIMENT' where tih.application_number = '23120000201'"
-  }
