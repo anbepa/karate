@@ -1,0 +1,27 @@
+[
+  {
+    "email": "andro11anto@gmail.com",
+    "password": "@Prueba123"
+  },
+
+  {
+    "email": "prueba@prueba2.com",
+    "password": "123456"
+  },
+
+  {
+    "email": "andro11anto@gmail.com",
+    "password": "1234565"
+  },
+
+  {
+    "email": "prueba2",
+    "password": "1234564"
+  },
+
+  {
+    "email": "usuariotrivia@gmail.com",
+    "password": "aBc123*"
+  }
+]
+
