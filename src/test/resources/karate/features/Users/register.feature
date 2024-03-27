@@ -1,4 +1,4 @@
-Feature: Register
+Feature: Register user
 
   Background:
     * configure headers = {'Content-Type': 'application/json'}
