@@ -30,14 +30,6 @@ jobs:
       - name: Build with Gradle Wrapper
         run: ./gradlew clean test -i
 
-      - name: Upload HTML report as an artifact to GitHub
-        id: artifact_upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: html-report
-          path: '${{ github.workspace }}/build/reports/tests/test/index.html'
-          if-no-files-found: error
-          retention-days: 2
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
