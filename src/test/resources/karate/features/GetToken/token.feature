@@ -1,7 +1,7 @@
 Feature: Get Token
 
   Background:
-    Given url 'https://kvjzaug6ec.execute-api.us-east-2.amazonaws.com/dev'
+    Given url 'https://somos-grandes-api.whiz.pe'
     * def token = null
     * def login_data = read('classpath:data/login.json')
 

@@ -10,7 +10,7 @@ function config() {
 
     var config = {
         useCustomAuth: true,
-        urlBase: 'https://kvjzaug6ec.execute-api.us-east-2.amazonaws.com/dev' // Valor predeterminado de urlBase
+        urlBase: 'https://somos-grandes-api.whiz.pe' // Valor predeterminado de urlBase
     };
 
     if (env == 'dev') {
@@ -18,7 +18,7 @@ function config() {
     } else if (env == 'cer') {
         config.urlBase = 'https://ml9c4hwuh4.execute-api.us-east-2.amazonaws.com/dev';
     } else if (env == 'local') {
-        config.urlBase = 'https://kvjzaug6ec.execute-api.us-east-2.amazonaws.com/dev';
+        config.urlBase = 'https://somos-grandes-api.whiz.pe';
     }
 
     var access_token = (function() {
