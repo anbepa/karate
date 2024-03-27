@@ -1,4 +1,4 @@
-Feature: Get token
+Feature: Register
 
   Background:
     * configure headers = {'Content-Type': 'application/json'}
