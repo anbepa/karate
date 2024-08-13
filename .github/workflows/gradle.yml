@@ -37,13 +37,13 @@ jobs:
           emulator-locale: en_US
           emulator-options: -no-window -no-audio -no-boot-anim
 
-      - name: Install System Image
+      - name: Install ARM System Image
         run: |
-          echo "y" | sdkmanager --install "system-images;android-30;default;x86_64"
+          echo "y" | sdkmanager --install "system-images;android-30;default;arm64-v8a"
 
       - name: Create AVD
         run: |
-          avdmanager create avd -n test -k "system-images;android-30;default;x86_64" --device "pixel"
+          avdmanager create avd -n test -k "system-images;android-30;default;arm64-v8a" --device "pixel"
 
       - name: Start Android Emulator
         run: |
