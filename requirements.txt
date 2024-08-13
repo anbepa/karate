@@ -1,3 +1,2 @@
 appium-python-client
 selenium
-unittest
