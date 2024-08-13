@@ -2,9 +2,9 @@ name: Python CI with Appium and Android Emulator
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -17,34 +17,15 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v4
 
-      - name: Cache Python dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
-      - name: Install Python dependencies
+      - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Cache Node.js dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-
-
-      - name: Install Appium
-        run: npm install -g appium
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v2
@@ -56,15 +37,21 @@ jobs:
           emulator-locale: en_US
           emulator-options: -no-window -no-audio -no-boot-anim
 
+      - name: Create AVD
+        run: |
+          echo "no" | avdmanager create avd -n test -k "system-images;android-30;default;x86_64" --device "pixel"
+
       - name: Start Android Emulator
         run: |
-          echo "y" | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --install "system-images;android-30;default;x86_64"
           $ANDROID_HOME/emulator/emulator -avd test -no-window -no-audio -no-boot-anim &
           adb wait-for-device
           adb shell input keyevent 82 &
 
       - name: Wait for Emulator to Boot
         run: adb shell getprop init.svc.bootanim | grep -m 1 stopped
+
+      - name: Install Appium
+        run: npm install -g appium
 
       - name: Start Appium Server
         run: appium &
